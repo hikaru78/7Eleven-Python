@@ -92,7 +92,7 @@ def generateTssa(URL, method, payload = None, accessToken = None):
 def cheapestFuelAll():
     # Just a quick way to get fuel prices from a website that is already created.
     # Thank you to master131 for this.
-    r = requests.get(PRICE_URL)
+    r = requests.get(PRICE_URL, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.0 Safari/537.36 Edg/80.0.360.0'})
     response = json.loads(r.text)
 
     # E10
